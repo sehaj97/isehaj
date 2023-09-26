@@ -10,7 +10,7 @@ const Wrapper = styled.section`
 
 function Hero() {
   return (
-    <Wrapper className="mx-auto my-auto py-5">
+    <Wrapper className="mx-auto my-auto p-5 d-flex align-items-center justify-content-start">
       <div className="container-fluid py-5">
         <h1 className="display-5 fw-bold">Custom jumbotron</h1>
         <p className="col-md-8 fs-4">
