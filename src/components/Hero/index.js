@@ -5,12 +5,12 @@ import styled from "styled-components";
 const Wrapper = styled.section`
   width: 100vw;
   height: 100vh;
-  background: papayawhip;
+  background: #ffffff;
 `;
 
 function Hero() {
   return (
-    <Wrapper>
+    <Wrapper className="mx-auto my-auto py-5">
       <div className="container-fluid py-5">
         <h1 className="display-5 fw-bold">Custom jumbotron</h1>
         <p className="col-md-8 fs-4">
