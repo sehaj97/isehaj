@@ -43,7 +43,7 @@ export default function Home() {
       </Wrapper>
 
       {/* {just for example} */}
-      {/* <Services/> */}
+      {/* <Servicepage/> */}
 
       {/* detailed info section */}
       <section className="mx-auto my-auto p-5 d-flex flex-col justify-content-start bg-white">
@@ -233,22 +233,6 @@ export default function Home() {
       {/* experience section */}
       {/* projects section */}
       {/* {contact me} */}
-      <section id="contact">
-        <div className="container">
-          <h2 className="section-title">Contact</h2>
-          <div className="contact-wrapper load-hidden">
-            <p className="contact-wrapper__text">Let's Work Together</p>
-            <a
-              rel="noreferrer"
-              target="_blank"
-              className="cta-btn cta-btn--resume"
-              href="mailto:sehajmagan@gmail.com"
-            >
-              Call to Action
-            </a>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
