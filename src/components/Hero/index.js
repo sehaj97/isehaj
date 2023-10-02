@@ -20,7 +20,7 @@ function Hero() {
       >
         The Unknown Software Developer
       </h1>
-      <Link href="/#intro">
+      <Link href="/#intro" passHref>
         <div class="btn-animated">
           <span>Know More </span>
         </div>
