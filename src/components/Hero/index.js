@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import styled from "styled-components";
 const NamedText = styled.span`
   background-image: linear-gradient(135deg, #bfbfbf 0%, #000000 100%);
@@ -14,11 +15,16 @@ function Hero() {
         Hi, My Name is <NamedText>Sehajpreet Singh.</NamedText>
       </h1>
       <h1
-        className="display-5 fw-bold animate__animated animate__pulse animate__infinite animate__slower"
+        className="display-5 fw-bold  animate__animated animate__fadeInLeft animate__slow"
         id="who"
       >
-        &nbsp; The Unknown Software Developer
+        The Unknown Software Developer
       </h1>
+      <Link href="/#intro">
+        <button class="btn-animated" href="#intro">
+          <span>Know More </span>
+        </button>
+      </Link>
     </div>
   );
 }

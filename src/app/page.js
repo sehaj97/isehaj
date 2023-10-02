@@ -17,14 +17,17 @@ import {
   faBitbucket,
   faSearchengin,
   faAccessibleIcon,
+  faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import {
+  faAngleUp,
   faC,
   faCode,
   faCommentSms,
   faDatabase,
   faLeaf,
 } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 const Wrapper = styled.section`
   width: 100vw;
   height: 100vh;
@@ -36,7 +39,7 @@ export default function Home() {
     <>
       {/* intro section */}
       <Wrapper
-        className="mx-auto my-auto p-5 d-flex align-items-center justify-content-start"
+        className="mx-auto my-auto p-5 d-flex align-items-center justify-content-start text-dark"
         id="home"
       >
         <Hero />
@@ -46,29 +49,52 @@ export default function Home() {
       {/* <Servicepage/> */}
 
       {/* detailed info section */}
-      <section className="mx-auto my-auto p-5 d-flex flex-col justify-content-start bg-white">
+      <section
+        className="mx-auto my-auto p-5 d-flex flex-col justify-content-start bg-white text-dark"
+        id="intro"
+      >
         <div className="row">
-          <div className="col-sm-10 col-md-8">
-            <h1 className="display-5 fw-bold .text-dark">Introduction</h1>
+          <div className="col-sm-10 col-md-8 mb-5">
+            <h1 className="display-5 fw-bold text-dark mb-5">Introduction</h1>
             <p className="fs-5 .text-dark">
               Are you looking for a Developer? Highly motivated and fast
               learner? I'm here for you!
             </p>
-            <p className="fs-5 .text-dark">
+            <p className="fs-5 text-dark">
               Highly skilled and results-driven Software Developer with 5 years
               of experience specializing in React.js. Proficient in performance
               optimization while delivering efficient, responsive, and visually
               appealing user interfaces.
             </p>
-            <p className="fs-5 .text-dark">
+            <p className="fs-5 text-dark">
               Adept at troubleshooting and maintaining SEO performance for
               seamless web experience. Committed to enhancing web accessibility
               standards to create inclusive digital products.
             </p>
-            <p className="fs-5 .text-dark">
+            <p className="fs-5 text-dark">
               I am always looking for opportunities to learn and grow as a
               developer.
             </p>
+
+            <p className="fs-5 d-flex text-dark my-3">
+              <Link
+                href="https://www.github.com/sehaj97"
+                className="d-flex justify-content-start align-items-center text-dark pr-5"
+              >
+                <FontAwesomeIcon icon={faGithub} size="2x" />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/sehajpreetsingh/"
+                className="d-flex justify-content-start align-items-center text-dark"
+              >
+                <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
+              </Link>
+            </p>
+            <Link href="/assets/resume.pdf">
+              <button class="btn-animated" href="#intro">
+                <span>Resume</span>
+              </button>
+            </Link>
           </div>
           <div className="col"></div>
         </div>
@@ -132,7 +158,10 @@ export default function Home() {
       </section>
 
       {/* tech skills section */}
-      <section className="mx-auto my-auto p-5 d-flex flex-col justify-content-start bg-white">
+      <section
+        className="mx-auto my-auto p-5 d-flex flex-col justify-content-start bg-white text-dark"
+        id="tech"
+      >
         <div className="row mb-5">
           <div className="col-sm-10 col-md-8">
             <h1 className="display-5 fw-bold ">Technical Skills</h1>
@@ -233,6 +262,52 @@ export default function Home() {
       {/* experience section */}
       {/* projects section */}
       {/* {contact me} */}
+
+      <section
+        className="mx-auto my-auto p-5 d-flex flex-col justify-content-start bg-white text-dark"
+        id="tech"
+      >
+        <div className="row mb-5">
+          <div className="col-sm-10 col-md-8">
+            <h1 className="display-5 fw-bold ">Contact</h1>
+          </div>
+        </div>
+        <div className="row mb-5">
+          <div className="col-sm-10 col-md-8">
+            <h3 className="fw-bold ">Let's Work Together</h3>
+            <Link href="mailto:sehajmagan@gmail.com">
+              <button
+                class="btn-animated"
+                href="#intro"
+                style={{ width: "230px" }}
+              >
+                <span>Call to Action</span>
+              </button>
+            </Link>
+            <p className="fs-5 d-flex text-dark my-3">
+              <Link
+                href="https://www.github.com/sehaj97"
+                className="d-flex justify-content-start align-items-center text-dark pr-5"
+              >
+                <FontAwesomeIcon icon={faGithub} size="2x" />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/sehajpreetsingh/"
+                className="d-flex justify-content-start align-items-center text-dark pr-5"
+              >
+                <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
+              </Link>
+
+              <Link
+                href="/#home"
+                className="d-flex justify-content-start align-items-center text-dark"
+              >
+                <FontAwesomeIcon icon={faAngleUp} size="2x" />
+              </Link>
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
