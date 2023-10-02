@@ -274,8 +274,8 @@ export default function Home() {
         </div>
         <div className="row mb-5">
           <div className="col-sm-10 col-md-8">
-            <h3 className="fw-bold ">Let's Work Together</h3>
-            <Link href="mailto:sehajmagan@gmail.com">
+            <h2 className="fw-bold display-6 mb-2">Let's Work Together</h2>
+            <Link href="mailto:sehajmagan@gmail.com" className="mb-2">
               <button
                 class="btn-animated"
                 href="#intro"
@@ -284,28 +284,42 @@ export default function Home() {
                 <span>Call to Action</span>
               </button>
             </Link>
-            <p className="fs-5 d-flex text-dark my-3">
-              <Link
-                href="https://www.github.com/sehaj97"
-                className="d-flex justify-content-start align-items-center text-dark pr-5"
-              >
-                <FontAwesomeIcon icon={faGithub} size="2x" />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/sehajpreetsingh/"
-                className="d-flex justify-content-start align-items-center text-dark pr-5"
-              >
-                <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
-              </Link>
-
-              <Link
-                href="/#home"
-                className="d-flex justify-content-start align-items-center text-dark"
-              >
-                <FontAwesomeIcon icon={faAngleUp} size="2x" />
-              </Link>
-            </p>
           </div>
+        </div>
+      </section>
+      <section
+        className="mx-auto my-auto p-5 d-flex flex-col justify-content-start bg-dark text-white"
+        id="tech"
+      >
+        <div className="row mb-5 d-flex flex-col justify-content-center align items-center">
+          <p className="fs-5 d-flex my-2">
+            <Link
+              href="/#home"
+              className="d-flex justify-content-start align-items-center"
+            >
+              <FontAwesomeIcon icon={faAngleUp} size="2x" />
+            </Link>
+          </p>
+          <p className="fs-5 d-flex my-2">
+            <Link
+              href="https://www.github.com/sehaj97"
+              className="d-flex justify-content-start align-items-center pr-5"
+            >
+              <FontAwesomeIcon icon={faGithub} size="2x" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/sehajpreetsingh/"
+              className="d-flex justify-content-start align-items-center pr-5"
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
+            </Link>
+          </p>
+          <div class="text-white">
+            <hr />
+          </div>
+          <p className="fs-5 d-flex my-2">
+            © 2023 - Developed by Sehajpreet Singh
+          </p>
         </div>
       </section>
     </>
