@@ -1,6 +1,6 @@
 "use client";
 import CardListing from "@/components/CardListing";
-import Hero from "@/components/Hero";
+import Hero from "@/Sections/Hero";
 import styled from "styled-components";
 const Wrapper = styled.section`
   width: 100vw;

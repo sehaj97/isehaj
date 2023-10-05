@@ -6,20 +6,21 @@ const NamedText = styled.span`
   -webkit-text-fill-color: transparent;
   color: #0000;
 `;
-function Hero() {
+function Hero({ content }) {
   return (
     <div className="container-fluid py-5">
       <h1 className="display-4 fw-bold animate__animated animate__fadeInLeft">
-        Hi, My Name is <NamedText>Sehajpreet Singh.</NamedText>
+        {content.title.firstPart}
+        <NamedText>{content.title.secondPart}</NamedText>
       </h1>
       <h1
         className="display-5 fw-bold  animate__animated animate__fadeInLeft animate__slow mb-5"
         id="who"
       >
-        The Unknown Software Developer.
+        {content.title.thirdPart}
       </h1>
-      <a href="/#intro" class="btn-animated my-5">
-        <span>Know More </span>
+      <a href="/#intro" className="btn-animated my-5">
+        <span>{content.button.text}</span>
       </a>
     </div>
   );

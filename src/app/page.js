@@ -1,5 +1,5 @@
 "use client";
-import Hero from "@/components/Hero";
+import Hero from "@/Sections/Hero";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,10 +7,8 @@ import {
   faReact,
   faGithub,
   faNodeJs,
-  faCloudflare,
   faCss3,
   faJs,
-  faAtlassian,
   faJira,
   faMicrosoft,
   faBootstrap,
@@ -21,19 +19,43 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faAngleUp,
-  faC,
   faCode,
-  faCommentSms,
   faDatabase,
   faLeaf,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import Intro from "@/Sections/Intro";
+
 const Wrapper = styled.section`
   width: 100vw;
   height: 100vh;
   background: #ffffff;
 `;
-
+const content = {
+  home: {
+    title: {
+      firstPart: "Hi, My Name is ",
+      secondPart: "Sehajpreet Singh.",
+      thirdPart: "The Unknown Software Developer.",
+    },
+    button: {
+      text: "Know More",
+    },
+  },
+  intro: {
+    title: { heading: "Introduction" },
+    description: [
+      "Are you looking for a Developer? Highly motivated and fast learner? I'm here for you!",
+      "Highly skilled and results-driven Software Developer with 5 years of experience specializing in React.js. Proficient in performance optimization while delivering efficient, responsive, and visually appealing user interfaces.",
+      "Adept at troubleshooting and maintaining SEO performance for seamless web experience. Committed to enhancing web accessibility standards to create inclusive digital products.",
+      "I am always looking for opportunities to learn and grow as a developer.",
+    ],
+  },
+  socials: {
+    github: "https://www.github.com/sehaj97",
+    linkedin: "https://www.linkedin.com/in/sehajpreetsingh/",
+  },
+};
 export default function Home() {
   return (
     <>
@@ -42,7 +64,7 @@ export default function Home() {
         className="mx-auto my-auto p-5 d-flex align-items-center justify-content-start text-dark"
         id="home"
       >
-        <Hero />
+        <Hero content={content.home} />
       </Wrapper>
 
       {/* {just for example} */}
@@ -53,108 +75,7 @@ export default function Home() {
         className="mx-auto my-auto p-5 d-flex flex-col justify-content-start bg-white text-dark"
         id="intro"
       >
-        <div className="row">
-          <div className="col-sm-10 col-md-8 mb-5">
-            <h1 className="display-5 fw-bold text-dark mb-5">Introduction</h1>
-            <p className="fs-5 .text-dark">
-              Are you looking for a Developer? Highly motivated and fast
-              learner? I'm here for you!
-            </p>
-            <p className="fs-5 text-dark">
-              Highly skilled and results-driven Software Developer with 5 years
-              of experience specializing in React.js. Proficient in performance
-              optimization while delivering efficient, responsive, and visually
-              appealing user interfaces.
-            </p>
-            <p className="fs-5 text-dark">
-              Adept at troubleshooting and maintaining SEO performance for
-              seamless web experience. Committed to enhancing web accessibility
-              standards to create inclusive digital products.
-            </p>
-            <p className="fs-5 text-dark">
-              I am always looking for opportunities to learn and grow as a
-              developer.
-            </p>
-
-            <p className="fs-5 d-flex text-dark my-3">
-              <Link
-                href="https://www.github.com/sehaj97"
-                className="d-flex justify-content-start align-items-center text-dark pr-5"
-              >
-                <FontAwesomeIcon icon={faGithub} size="2x" />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/sehajpreetsingh/"
-                className="d-flex justify-content-start align-items-center text-dark"
-              >
-                <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
-              </Link>
-            </p>
-            <Link href="/assets/resume.pdf">
-              <button class="btn-animated" href="#intro">
-                <span>Resume</span>
-              </button>
-            </Link>
-          </div>
-          <div className="col"></div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <div className="card text-bg-dark mb-3">
-              <div className="card-body d-flex flex-col justify-content-center align-items-center p-5">
-                <h5 className="card-title pb-5">
-                  <img
-                    src="/assets/frontend.png"
-                    className="rounded"
-                    alt="..."
-                  />
-                </h5>
-                <p className="card-text fw-bold">Frontend Developer</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col">
-            <div className="card text-bg-dark mb-3">
-              <div className="card-body d-flex flex-col justify-content-center align-items-center p-5">
-                <h5 className="card-title pb-5">
-                  <img
-                    src="/assets/backend.png"
-                    className="rounded"
-                    alt="..."
-                  />
-                </h5>
-                <p className="card-text fw-bold">Software Design</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col">
-            <div className="card text-bg-dark mb-3">
-              <div className="card-body d-flex flex-col justify-content-center align-items-center p-5">
-                <h5 className="card-title pb-5">
-                  <img src="/assets/design.png" className="rounded" alt="..." />
-                </h5>
-                <p className="card-text fw-bold">UI/UX Design</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col">
-            <div className="card text-bg-dark mb-3">
-              <div className="card-body d-flex flex-col justify-content-center align-items-center p-5">
-                <h5 className="card-title pb-5">
-                  <img
-                    src="/assets/software.png"
-                    className="rounded"
-                    alt="..."
-                  />
-                </h5>
-                <p className="card-text fw-bold">Backend Developer</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Intro content={content.intro} />
       </section>
 
       {/* tech skills section */}
@@ -277,7 +198,7 @@ export default function Home() {
             <h2 className="fw-bold display-6 mb-2">Let's Work Together</h2>
             <Link href="mailto:sehajmagan@gmail.com" className="mb-2">
               <button
-                class="btn-animated"
+                className="btn-animated"
                 href="#intro"
                 style={{ width: "230px" }}
               >
@@ -314,7 +235,8 @@ export default function Home() {
               <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
             </Link>
           </p>
-          <div class="text-white">
+
+          <div className="text-white">
             <hr />
           </div>
           <p className="fs-5 d-flex my-2">

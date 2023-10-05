@@ -3,7 +3,7 @@ function Card() {
     <div className="card">
       <img
         src="https://cdn2.thecatapi.com/images/5cq.jpg"
-        class="card-img-top"
+        className="card-img-top"
         alt="..."
       />
       <div className="card-body">
